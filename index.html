@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
     <!-- TODO: Link Javascript file -->
-    <script src=""></script>
+    <script src="/index.js"></script>
 
     
     <title>SCFHS Library</title>
@@ -32,41 +32,37 @@
 
     <!-- TODO: Create a form to add books -->
     <br><br>
-    <div class="container">
+        <div class="container">
 
-        <h3 style="background-color:lightgray">Add New Book</h3>
+            <h3 style="background-color:lightgray">Add New Book</h3>
+           
+            <form onsubmit="return addBook(this)">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="subtitle">Subtitle</label>
+                        <input type="text" class="form-control" id="subtitle">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="author">Author</label>
+                        <input type="text" class="form-control" id="author">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="image">Image URL</label>
+                        <input type="text" class="form-control" id="image">
+                    </div>
 
-        <form>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="Title">Title</label>
-                    <input type="text" class="form-control" id="title">
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="Subtitle">Subtitle</label>
-                    <input type="text" class="form-control" id="subtitle">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="Author">Author</label>
-                    <input type="text" class="form-control" id="author">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="Image">Image URL</label>
-                    <input type="text" class="form-control" id="image">
-                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">ADD BOOK</button>
 
-                <!--check the requirements-->
-
-                <!-- <div class="form-group">
-                    <label for="exampleFormControlFile1">Example file input</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>-->
-
-            </div>
-            <br>
-            <button type="submit" class="btn btn-primary">ADD BOOK</button>
-        </form>
-    </div>
+            </form>
+           
+            
+        </div>
 
 
 
