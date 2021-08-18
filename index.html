@@ -11,13 +11,15 @@
     <!-- Use Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
+
     <!-- TODO: Link Javascript file -->
     <script src="/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     
+
     <title>SCFHS Library</title>
-    </head>
+</head>
 <body>
     <div class="container">
         <nav class="navbar navbar-light bg-light">
@@ -40,19 +42,19 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="title">Title</label>
-                        <input type="text" class="form-control" id="title">
+                        <input type="text" class="form-control" id="title" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="subtitle">Subtitle</label>
-                        <input type="text" class="form-control" id="subtitle">
+                        <input type="text" class="form-control" id="subtitle" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="author">Author</label>
-                        <input type="text" class="form-control" id="author">
+                        <input type="text" class="form-control" id="author" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="image">Image URL</label>
-                        <input type="text" class="form-control" id="image">
+                        <input type="url" class="form-control" id="image" required>
                     </div>
 
                 </div>
@@ -60,8 +62,7 @@
                 <button type="submit" class="btn btn-primary">ADD BOOK</button>
 
             </form>
-           
-            
+                
         </div>
 
 
@@ -70,7 +71,7 @@
     <br><br><br><br>
     <div class="container">
         <h3 style="background-color:lightgray">View All Books</h3>
-        <table class="table table-hover align-middle">
+        <table class="table table-hover align-middle" id="booksTable">
             <thead>
                 <tr>
                     <th scope="col"></th>
@@ -81,45 +82,8 @@
                     <th scope="col"></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Placeholder</td>
-                    <td>Placeholder</td>
-                    <td>Placeholder</td>
-                    <td>Placeholder</td>
-                    <td>
-                        <button type="button" class="btn btn-danger btn-sm px-3">
-                            <i class="fas fa-times">Delete</i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Placeholder</td>
-                    <td>Placeholder</td>
-                    <td>Placeholder</td>
-                    <td>Placeholder</td>
-                    <td>
-                        <button type="button" class="btn btn-danger btn-sm px-3">
-                            <i class="fas fa-times">Delete</i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Placeholder</td>
-                    <td>Placeholder</td>
-                    <td>Placeholder</td>
-                    <td>Placeholder</td>
-                    <td>
-                        <button type="button" class="btn btn-danger btn-sm px-3">
-                            <i class="fas fa-times">Delete</i>
-                        </button>
-                    </td>
-                </tr>
-
-
+            <tbody id="tableBoody">
+                <!--Done By JS-->
             </tbody>
         </table>
     </div>
